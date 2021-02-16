@@ -35,10 +35,11 @@
   .nav-options {
     padding-left: 25px;
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(6, auto);
     grid-gap: 50px;
     list-style-type: none;
     color: black;
+    font-size: 16px;
   }
   .mobile-option {
     display: none;
@@ -54,6 +55,9 @@
 
   .mobile-menu {
     display: none;
+  }
+  img {
+    image-rendering: crisp-edges;
   }
   @media (max-width: 648px) {
     /*Mobile View */

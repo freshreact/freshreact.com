@@ -9,8 +9,6 @@ import Templates from "./components/templates/Templates";
 
 import Playground from './components/playground/Playground';
 
-import Contact from "./components/contact/Contact";
-
 import Footer from "./components/footer/Footer";
 import './App.css';
 
@@ -24,7 +22,12 @@ class App extends Component {
           <Route exact path="/" component={Landing}/>
           <Route path="/templates" component={Templates}/>
           <Route path="/playground" component={Playground}/>
-          <Route path="/contact" component={Contact}/>
+          <Route path="/recharts" component={Playground}/>
+          <Route path="/d3" component={Playground}/>
+          <Route path="/api" component={Playground}/>
+          <Route path="/cards" component={Playground}/>
+          <Route path="/colorbrewer" component={Playground}/>
+          <Route path="/routing" component={Playground}/>
           <Redirect to="/" />
         </Switch>
         <Footer />

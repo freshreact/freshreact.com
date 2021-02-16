@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as CloseMenu } from "../../assets/x.svg";
 import { ReactComponent as MenuIcon } from "../../assets/menu.svg";
-import Logo from "../../assets/fresh-react-logo.png";
+import Logo from "../../assets/fresh-react-logo.svg";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -13,17 +13,26 @@ const Navbar = () => {
     <div className="header">
       <div className="logo-nav">
         <div className="logo-container">
-          <NavLink exact to="/"><img src={Logo} alt="logor" height="40" width="auto"/></NavLink>
+          <NavLink exact to="/"><img src={Logo} alt="logor" height="60" width="60"/></NavLink>
         </div>
         <ul className={click ? "nav-options active" : "nav-options"}>
           <li className="option" onClick={closeMobileMenu}>
-            <NavLink activeClassName='is-active' to="/templates">TEMPLATES</NavLink>
+            <NavLink activeClassName='is-active' to="/recharts">RECHARTS</NavLink>
           </li>
           <li className="option" onClick={closeMobileMenu}>
-            <NavLink activeClassName='is-active' to="/playground">PLAYGROUND</NavLink>
+            <NavLink activeClassName='is-active' to="/d3">D3</NavLink>
           </li>
           <li className="option" onClick={closeMobileMenu}>
-            <NavLink activeClassName='is-active' to="/contact">CONTACT</NavLink>
+            <NavLink activeClassName='is-active' to="/api">APIs</NavLink>
+          </li>
+          <li className="option" onClick={closeMobileMenu}>
+            <NavLink activeClassName='is-active' to="/cards">CARDS</NavLink>
+          </li>
+          <li className="option" onClick={closeMobileMenu}>
+            <NavLink activeClassName='is-active' to="/colorbrewer">COLORBREWER</NavLink>
+          </li>
+          <li className="option" onClick={closeMobileMenu}>
+            <NavLink activeClassName='is-active' to="/routing">ROUTING</NavLink>
           </li>
         </ul>
       </div>

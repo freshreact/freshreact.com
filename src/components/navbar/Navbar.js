@@ -29,9 +29,6 @@ const Navbar = () => {
             <NavLink activeClassName='is-active' to="/cards">CARDS</NavLink>
           </li>
           <li className="option" onClick={closeMobileMenu}>
-            <NavLink activeClassName='is-active' to="/colorbrewer">COLORBREWER</NavLink>
-          </li>
-          <li className="option" onClick={closeMobileMenu}>
             <NavLink activeClassName='is-active' to="/routing">ROUTING</NavLink>
           </li>
         </ul>

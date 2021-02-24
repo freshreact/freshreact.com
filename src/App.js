@@ -11,8 +11,6 @@ import Recharts from "./components/recharts/Recharts";
 
 import D3 from "./components/d3/D3";
 
-import APIs from "./components/apis/APIs";
-
 import Cards from "./components/cards/Cards";
 
 import Routing from "./components/routing/Routing";
@@ -33,7 +31,6 @@ class App extends Component {
           <Route exact path="/" component={Landing}/>
           <Route path="/recharts" component={Recharts}/>
           <Route path="/d3" component={D3}/>
-          <Route path="/api" component={APIs}/>
           <Route path="/cards" component={Cards}/>
           <Route path="/routing" component={Routing}/>
           <Redirect to="/" />

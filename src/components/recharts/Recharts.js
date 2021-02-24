@@ -8,6 +8,7 @@ class Recharts extends Component{
     }
     
     render(){
+
         return(
             <div className="recharts-container">
                 <h1>Welcome to Recharts</h1>

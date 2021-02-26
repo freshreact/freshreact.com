@@ -1,6 +1,6 @@
 ## Dependencies
 
-You require Node.js and npm in order to view The Energy Viz Project locally. 
+You require Node.js and npm in order to view Fresh React locally. 
 
 Use the following commands in your terminal to ensure that you have Node and npm (Node Package Manager) installed. If not, you can install it at https://nodejs.org/en/download/.
 ```sh

@@ -1,9 +1,10 @@
 import React from 'react';
+import './RoutingComponent.css';
   
-function RoutingComponent (){
+function RoutingComponent(props){
         
         return (
-            <div>
+            <div className="routing-component" style={{backgroundColor: props.color }}>
                 <h1>Hello</h1>
             </div>
         );

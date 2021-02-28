@@ -4,15 +4,31 @@ import "./Routing.css";
 
 import RoutingComponent from './routing-components/RoutingComponent';
 
-function RoutingHome() {
+function RoutingHome(props) {
     return (
-        <div className="portfolio-container">
-            Routing Home
+        <div className="routing-home-container" style={{backgroundColor: props.color }}>
+            <h1>Home</h1>
         </div>
     );
 }
 
 class Routing extends Component{
+
+    state = {
+        // Default background color
+        home: {
+            background: '#FF7197'
+        },
+        routeOne: {
+            background: '#7EFFD0'
+        },
+        routeTwo: {
+            background: '#7FD2FF'
+        },
+        routeThree: {
+            background: '#A592FF'
+        }
+    };
 
     componentDidMount() {
         window.scrollTo(0, 0)
@@ -22,19 +38,35 @@ class Routing extends Component{
         return(
             <BrowserRouter>
                 <center>
-                <div className="option-container">
-                    <ul className="portfolio-options">
-                        <li><NavLink activeClassName='is-active' className="port-option" to="/routing">Routing Home</NavLink></li>
-                        <li><NavLink activeClassName='is-active' className="port-option" to="/routing/option1">Option1</NavLink></li>
-                        <li><NavLink activeClassName='is-active' className="port-option" to="/routing/option2">Option2</NavLink></li>
-                        <li><NavLink activeClassName='is-active' className="port-option" to="/routing/option3">Option3</NavLink></li>
+                <div className="routing-container">
+                    <ul className="routing-options">
+                        <li>
+                            <NavLink activeClassName='is-active' className="route-option" to="/routing">
+                                <div className="route-op" style={{backgroundColor: this.state.home.background }}>Home</div>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName='is-active' className="route-option" to="/routing/route1">
+                                <div className="route-op" style={{backgroundColor: this.state.routeOne.background }}>Route 1</div>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName='is-active' className="route-option" to="/routing/route2">
+                                <div className="route-op" style={{backgroundColor: this.state.routeTwo.background }}>Route 2</div>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName='is-active' className="route-option" to="/routing/route3">
+                                <div className="route-op" style={{backgroundColor: this.state.routeThree.background }}>Route 3</div>
+                            </NavLink>
+                        </li>
                     </ul>
                     <br></br>
                     <Switch>
-                        <Route exact path="/routing" component={RoutingHome} />
-                        <Route path="/routing/option1" component={RoutingComponent} />
-                        <Route path="/routing/option2" component={RoutingComponent}/>
-                        <Route path="/routing/option3" component={RoutingComponent}/>
+                        <Route exact path="/routing" component={() => <RoutingHome color={this.state.home.background}/>} />
+                        <Route path="/routing/route1" component={() => <RoutingComponent color={this.state.routeOne.background}/>} />
+                        <Route path="/routing/route2" component={() => <RoutingComponent color={this.state.routeTwo.background}/>}/>
+                        <Route path="/routing/route3" component={() => <RoutingComponent color={this.state.routeThree.background}/>}/>
                         <Redirect to="/portfolio" />
                     </Switch>
                 </div>

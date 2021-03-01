@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ChromePicker, TwitterPicker } from 'react-color';
+import { ChromePicker } from 'react-color';
 import "./Cards.css";
 
 class Cards extends Component{
@@ -59,6 +59,7 @@ class Cards extends Component{
         }
     };
 
+    // Change selected card
     onChangeValue = (e) => {
         this.setState({ selectedOption: e.target.value });
     }
@@ -83,51 +84,52 @@ class Cards extends Component{
                                 <p>Cards are cool!<br></br>by Fresh React</p>
                             </div>
                         </div>
-                    <div className="code-box">
-                        Code Box
-                    </div>
                     </div>
                     <div className="column">
-                        <div className="color-controller">
-                            <p>Card Designer</p>
-                            <br></br>
-                            <hr></hr>
-                            <br></br>
-                            <form onChange={this.onChangeValue}>
-                                <input 
-                                    className="card-radio-button" 
-                                    type="radio" 
-                                    value="one" 
-                                    name="gender" 
-                                    defaultChecked
-                                /> Card 1
-                                <input 
-                                    className="card-radio-button" 
-                                    type="radio" 
-                                    value="two" 
-                                    name="gender" 
-                                /> Card 2  
-                                <input 
-                                    className="card-radio-button" 
-                                    type="radio" 
-                                    value="three" 
-                                    name="gender" 
-                                /> Card 3  
-                            </form>
-                            <br></br>
-                            <ChromePicker 
-                                color={ this.state.background } 
-                                select={ this.state.selectedOption } 
-                                onChange={ this.handleChange } 
-                                onChangeComplete={ this.handleChangeComplete } 
-                            />
-                            <br></br>
-                            <TwitterPicker 
-                                color={ this.state.background } 
-                                select={ this.state.selectedOption } 
-                                onChange={ this.handleChange } 
-                                onChangeComplete={ this.handleChangeComplete } 
-                            />
+                        <div className="row">
+                            <div className="column-controllers">
+                                <div className="color-controller">
+                                    <p>Card Designer</p>
+                                    <br></br>
+                                    <hr></hr>
+                                    <br></br>
+                                    <form onChange={this.onChangeValue}>
+                                        <input 
+                                            className="card-radio-button" 
+                                            type="radio" 
+                                            value="one" 
+                                            name="gender" 
+                                            defaultChecked
+                                        /> Card 1
+                                        <input 
+                                            className="card-radio-button" 
+                                            type="radio" 
+                                            value="two" 
+                                            name="gender" 
+                                        /> Card 2  
+                                        <input 
+                                            className="card-radio-button" 
+                                            type="radio" 
+                                            value="three" 
+                                            name="gender" 
+                                        /> Card 3  
+                                    </form>
+                                    <br></br>
+                                    <center>
+                                        <ChromePicker 
+                                            color={ this.state.background } 
+                                            select={ this.state.selectedOption } 
+                                            onChange={ this.handleChange } 
+                                            onChangeComplete={ this.handleChangeComplete } 
+                                        />
+                                    </center>
+                                </div>
+                            </div>
+                            <div className="column-controllers">
+                                <div className="code-output">
+                                    Hello
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

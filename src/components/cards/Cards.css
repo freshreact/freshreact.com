@@ -18,7 +18,7 @@
     border-radius: 4px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 .card-radio-button {
@@ -31,11 +31,25 @@
     padding: 10px;
   }
 
-  .column-card {
+.column-card {
     float: left;
     width: 33%;
     padding: 5px;
+}
+
+.column-controllers {
+    float: left;
+    width: 50%;
+    padding: 10px;
   }
+
+  .code-output {
+    height: 550px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    text-align: center;
+}
   
 /* Clear floats after the columns */
 .row:after {
@@ -47,5 +61,15 @@
 @media screen and (max-width: 600px) {
     .column {
       width: 100%;
+    }
+    
+    .column-controllers {
+        width: 100%;
+    }
+
+    .cards-container {
+        height: 1600px;
+        padding: 15px;
+        padding-top: 100px;
     }
 }

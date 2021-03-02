@@ -23,13 +23,7 @@ const Navbar = () => {
             <NavLink activeClassName='is-active' to="/d3">D3</NavLink>
           </li>
           <li className="option" onClick={closeMobileMenu}>
-            <NavLink activeClassName='is-active' to="/api">APIs</NavLink>
-          </li>
-          <li className="option" onClick={closeMobileMenu}>
             <NavLink activeClassName='is-active' to="/cards">CARDS</NavLink>
-          </li>
-          <li className="option" onClick={closeMobileMenu}>
-            <NavLink activeClassName='is-active' to="/colorbrewer">COLORBREWER</NavLink>
           </li>
           <li className="option" onClick={closeMobileMenu}>
             <NavLink activeClassName='is-active' to="/routing">ROUTING</NavLink>

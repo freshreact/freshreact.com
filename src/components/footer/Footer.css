@@ -1,7 +1,7 @@
 .footer-container {
     padding: 50px;
     background-color: rgb(240, 240, 240);
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
 }

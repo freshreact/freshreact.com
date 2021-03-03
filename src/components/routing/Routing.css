@@ -26,9 +26,14 @@
 
 @media screen and (max-width: 600px) {
     .routing-home-container {
-        width: 100%;
+        width: 90%;
     }
+
+    .routing-options {
+        list-style: none;
+    }
+
     .route-op {
-        width: 100%;
+        width: 90%;
     }
 }

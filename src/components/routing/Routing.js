@@ -7,7 +7,10 @@ import RoutingComponent from './routing-components/RoutingComponent';
 function RoutingHome(props) {
     return (
         <div className="routing-home-container" style={{backgroundColor: props.color }}>
-            <h1>Home</h1>
+            <div className="routing-individual-component">
+                <p className="route-header">Welcome to {props.route} component!</p>
+                <p className="route-color">The background color is:<br></br>{props.color}</p>
+            </div>
         </div>
     );
 }
@@ -30,6 +33,7 @@ class Routing extends Component{
         }
     };
 
+    // Bring window view to top on change
     componentDidMount() {
         window.scrollTo(0, 0)
     }
@@ -63,10 +67,10 @@ class Routing extends Component{
                     </ul>
                     <br></br>
                     <Switch>
-                        <Route exact path="/routing" component={() => <RoutingHome color={this.state.home.background}/>} />
-                        <Route path="/routing/route1" component={() => <RoutingComponent color={this.state.routeOne.background}/>} />
-                        <Route path="/routing/route2" component={() => <RoutingComponent color={this.state.routeTwo.background}/>}/>
-                        <Route path="/routing/route3" component={() => <RoutingComponent color={this.state.routeThree.background}/>}/>
+                        <Route exact path="/routing" component={() => <RoutingHome route="Home" color={this.state.home.background}/>} />
+                        <Route path="/routing/route1" component={() => <RoutingComponent route="Route 1" color={this.state.routeOne.background}/>} />
+                        <Route path="/routing/route2" component={() => <RoutingComponent route="Route 2" color={this.state.routeTwo.background}/>}/>
+                        <Route path="/routing/route3" component={() => <RoutingComponent route="Route 3" color={this.state.routeThree.background}/>}/>
                         <Redirect to="/portfolio" />
                     </Switch>
                 </div>

@@ -11,6 +11,7 @@ const Navbar = () => {
   const closeMobileMenu = () => setClick(false);
   return (
     <div className="header">
+      {/* Comment */}
       <div className="logo-nav">
         <div className="logo-container">
           <NavLink exact to="/"><img src={Logo} alt="logor" height="60" width="60"/></NavLink>
@@ -27,6 +28,9 @@ const Navbar = () => {
           </li>
           <li className="option" onClick={closeMobileMenu}>
             <NavLink activeClassName='is-active' to="/routing">ROUTING</NavLink>
+          </li>
+          <li className="option" onClick={closeMobileMenu}>
+            <NavLink activeClassName='is-active' to="/random">RANDOM</NavLink>
           </li>
         </ul>
       </div>

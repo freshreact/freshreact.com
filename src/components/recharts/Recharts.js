@@ -4,8 +4,10 @@ import "./Recharts.css";
 import Historical from './rechart-components/Historical';
 import Volume from './rechart-components/Volume';
 import Equity from './rechart-components/Equity';
+import Info from './rechart-components/Info';
 
 import SQ from './stock_historical_data/SQ/sq_year.json';
+import SQInfo from './stock_historical_data/SQ/sq_info.json';
 
 class Recharts extends Component{
 
@@ -22,8 +24,12 @@ class Recharts extends Component{
                         <Volume data={SQ}/>
                     </div>
                     <div class="column-sq">
-                        <Equity/>
-                        <Equity />
+                        <center>
+                            <Info data={SQInfo}/>
+                        </center>
+                        <center>
+                            <Equity />
+                        </center>
                     </div>
                 </div>
             </div>

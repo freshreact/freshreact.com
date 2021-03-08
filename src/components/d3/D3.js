@@ -35,7 +35,6 @@ class D3 extends Component{
     render(){
         return(
             <div className="d3-container">
-                <h1>Welcome to D3</h1>
                 <div id="d3-cont"></div>
             </div>
         );

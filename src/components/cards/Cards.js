@@ -12,9 +12,6 @@ class Cards extends Component{
         two: {
             background: '#fff'
         },
-        three: {
-            background: '#fff'
-        },
         // Default card
         selectedOption: 'one'
     };
@@ -32,11 +29,6 @@ class Cards extends Component{
             two.background = color.hex;
             this.setState({two});
         }
-        if ( this.state.selectedOption === 'three'){
-            var three = {...this.state.two}
-            three.background = color.hex;
-            this.setState({three});
-        }
     }
     
     // Handle color change final state
@@ -51,11 +43,6 @@ class Cards extends Component{
             var two = {...this.state.two}
             two.background = color.hex;
             this.setState({two});
-        }
-        if ( this.state.selectedOption === 'three'){
-            var three = {...this.state.two}
-            three.background = color.hex;
-            this.setState({three});
         }
     };
 
@@ -76,11 +63,6 @@ class Cards extends Component{
                         </div>
                         <div className="column-card">
                             <div className="main-card" style={{backgroundColor: this.state.two.background }}>
-                                <p>Cards are cool!<br></br>by Fresh React</p>
-                            </div>
-                        </div>
-                        <div className="column-card">
-                            <div className="main-card" style={{backgroundColor: this.state.three.background }}>
                                 <p>Cards are cool!<br></br>by Fresh React</p>
                             </div>
                         </div>
@@ -106,13 +88,7 @@ class Cards extends Component{
                                             type="radio" 
                                             value="two" 
                                             name="gender" 
-                                        /> Card 2  
-                                        <input 
-                                            className="card-radio-button" 
-                                            type="radio" 
-                                            value="three" 
-                                            name="gender" 
-                                        /> Card 3  
+                                        /> Card 2   
                                     </form>
                                     <br></br>
                                     <center>

@@ -20,6 +20,7 @@ const InfoHeader = (props) => {
 const Info = (props) => {
 
         const info_data = props.data[0];
+        console.log(info_data);
 
         return(
             <div className="information-container">
@@ -32,12 +33,12 @@ const Info = (props) => {
                 />
                 <hr></hr>
                 <div className="info-box">
-                    <p className="info-item">52-Week High: {info_data.fiftyTwoWeekHigh}</p>
-                    <p className="info-item">Profit Margins: {info_data.profitMargins}</p>
-                    <p className="info-item">52-Week Change: {info_data.fiftyTwoWeekChange}</p>
-                    <p className="info-item">Average Volume: {info_data.averageVolume}</p>
-                    <p className="info-item">50 Day Average: {info_data.fiftyDayAverage}</p>
-                    <p className="info-item">200 Day Average: {info_data.twoHundredDayAverage}</p>
+                    <p className="info-item"><b>52-Week High:</b>52-Week High: {info_data.fiftyTwoWeekHigh} <b>Earnings Quarterly Growth:</b> {info_data.earningsQuarterlyGrowth}</p>
+                    <p className="info-item"><b>Profit Margins:</b> {info_data.profitMargins} <b>52 Week High:</b> {info_data.fiftyTwoWeekHigh}</p>
+                    <p className="info-item"><b>52-Week Change:</b> {info_data.fiftyTwoWeekChange} <b>52 Week Low:</b> {info_data.fiftyTwoWeekLow}</p>
+                    <p className="info-item"><b>Average Volume:</b> {info_data.averageVolume} <b>Forward EPS:</b> {info_data.forwardEps}</p>
+                    <p className="info-item"><b>50 Day Average:</b> {info_data.fiftyDayAverage} <b>Market Cap:</b> {info_data.marketCap}</p>
+                    <p className="info-item"><b>200 Day Average:</b> {info_data.twoHundredDayAverage} <b>Price to Book:</b> {info_data.priceToBook}</p>
                 </div>
             </div>
         );

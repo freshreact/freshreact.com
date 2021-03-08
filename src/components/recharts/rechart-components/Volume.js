@@ -11,7 +11,7 @@ const Volume = (props) => {
                         data={props.data}
                         margin={{
                             top: 0,
-                            right: 20,
+                            right: 0,
                             left: 20,
                             bottom: 0,
                         }}

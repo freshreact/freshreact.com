@@ -3,6 +3,8 @@ import { AreaChart, Area, XAxis, YAxis, Tooltip } from 'recharts';
 
 const Historical = (props) => {
 
+        console.log(window.innerWidth);
+
         return(
             <div>
                 <AreaChart

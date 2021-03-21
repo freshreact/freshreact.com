@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as d3 from "d3";
 import "./D3.css";
+import CartographChart from './d3-components/CartographChart';
 
 class D3 extends Component{
 
@@ -35,8 +36,8 @@ class D3 extends Component{
     render(){
         return(
             <div className="d3-container">
-                <h1>Welcome to D3</h1>
                 <div id="d3-cont"></div>
+                <CartographChart />
             </div>
         );
     }

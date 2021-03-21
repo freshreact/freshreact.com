@@ -1,6 +1,16 @@
 import React from 'react';
 import { AreaChart, Area, XAxis, YAxis, Tooltip } from 'recharts';
 
+var iWidth = window.innerWidth;
+
+let barWidth = 700;
+let barHeight = 300;
+
+if ( iWidth < 600){
+    barWidth = 300;
+    barHeight = 200;
+}
+
 const Historical = (props) => {
 
         console.log(window.innerWidth);
@@ -8,13 +18,13 @@ const Historical = (props) => {
         return(
             <div>
                 <AreaChart
-                        width={700}
-                        height={300}
+                        width={barWidth}
+                        height={barHeight}
                         data={props.data}
                         margin={{
                             top: 0,
                             right: 0,
-                            left: 20,
+                            left: 0,
                             bottom: 0,
                         }}
                     >

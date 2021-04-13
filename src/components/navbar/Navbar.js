@@ -29,9 +29,6 @@ const Navbar = () => {
           <li className="option" onClick={closeMobileMenu}>
             <NavLink activeClassName='is-active' to="/routing">ROUTING</NavLink>
           </li>
-          <li className="option" onClick={closeMobileMenu}>
-            <NavLink activeClassName='is-active' to="/random">RANDOM</NavLink>
-          </li>
         </ul>
       </div>
       <div className="mobile-menu" onClick={handleClick}>

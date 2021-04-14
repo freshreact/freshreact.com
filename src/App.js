@@ -35,7 +35,6 @@ class App extends Component {
           <Route path="/d3" component={D3}/>
           <Route path="/cards" component={Cards}/>
           <Route path="/routing" component={Routing}/>
-          <Route path="/random" component={Random}/>
           <Redirect to="/" />
         </Switch>
         <Footer />

@@ -1,3 +1,5 @@
+# freshreact.com | Fresh React Community
+
 ## Dependencies
 
 You require Node.js and npm in order to view Fresh React locally. 

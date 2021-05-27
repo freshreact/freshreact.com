@@ -15,8 +15,6 @@ import Cards from "./components/cards/Cards";
 
 import Routing from "./components/routing/Routing";
 
-import Random from "./components/random/Random";
-
 import Footer from "./components/footer/Footer";
 
 // Import CSS

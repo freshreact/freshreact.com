@@ -14,7 +14,8 @@ npm -v
 
 Step 1. Clone the repository
 ```sh
-git clone git@github.com:parthmerchant/freshreact.git
+git clone git@github.com:freshreact/freshreact.com.git
+cd freshreact.com
 ```
 
 Step 2. Install `node_modules/` by using the following command

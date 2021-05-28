@@ -12,6 +12,9 @@ class Cards extends Component{
         two: {
             background: '#fff'
         },
+        three: {
+            background: '#fff'
+        },
         // Default card
         selectedOption: 'one'
     };
@@ -29,6 +32,11 @@ class Cards extends Component{
             two.background = color.hex;
             this.setState({two});
         }
+        if ( this.state.selectedOption === 'three'){
+            var three = {...this.state.three}
+            three.background = color.hex;
+            this.setState({three});
+        }
     }
     
     // Handle color change final state
@@ -43,6 +51,11 @@ class Cards extends Component{
             var two = {...this.state.two}
             two.background = color.hex;
             this.setState({two});
+        }
+        if ( this.state.selectedOption === 'three'){
+            var three = {...this.state.three}
+            three.background = color.hex;
+            this.setState({three});
         }
     };
 
@@ -68,46 +81,47 @@ class Cards extends Component{
                         </div>
                     </div>
                     <div className="column">
-                        <div className="row">
-                            <div className="column-controllers">
-                                <div className="color-controller">
-                                    <p>Card Designer</p>
-                                    <br></br>
-                                    <hr></hr>
-                                    <br></br>
-                                    <form onChange={this.onChangeValue}>
-                                        <input 
-                                            className="card-radio-button" 
-                                            type="radio" 
-                                            value="one" 
-                                            name="gender" 
-                                            defaultChecked
-                                        /> Card 1
-                                        <input 
-                                            className="card-radio-button" 
-                                            type="radio" 
-                                            value="two" 
-                                            name="gender" 
-                                        /> Card 2   
-                                    </form>
-                                    <br></br>
-                                    <center>
-                                        <ChromePicker 
-                                            color={ this.state.background } 
-                                            select={ this.state.selectedOption } 
-                                            onChange={ this.handleChange } 
-                                            onChangeComplete={ this.handleChangeComplete } 
-                                        />
-                                    </center>
-                                </div>
+                        <div className="column-card">
+                            <div className="main-card" style={{backgroundColor: this.state.three.background }}>
+                                <p>Cards are cool!<br></br>by Fresh React</p>
                             </div>
-                            <div className="column-controllers">
-                                <div className="code-output">
-                                    Hello
-                                </div>
+                        </div>
+                        <div className="column-card">
+                            <div className="main-card">
+                                <form onChange={this.onChangeValue}>
+                                    <input 
+                                        className="card-radio-button" 
+                                        type="radio" 
+                                        value="one" 
+                                        name="color"
+                                        defaultChecked
+                                    /> Card 1
+                                    <input 
+                                        className="card-radio-button" 
+                                        type="radio" 
+                                        value="two" 
+                                        name="color"
+                                    /> Card 2  
+                                    <input 
+                                        className="card-radio-button" 
+                                        type="radio" 
+                                        value="three" 
+                                        name="color"
+                                    /> Card 3 
+                                </form>
+                                <br></br>
+                                <center>
+                                    <ChromePicker 
+                                        color={ this.state.background } 
+                                        select={ this.state.selectedOption } 
+                                        onChange={ this.handleChange } 
+                                        onChangeComplete={ this.handleChangeComplete } 
+                                    />
+                                </center>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         );

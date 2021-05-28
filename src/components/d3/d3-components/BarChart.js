@@ -52,11 +52,6 @@ class BarChart extends Component{
         const g = svg.append("g")
             .attr('transform', `translate(${margin.left}, ${margin.bottom})`);
 
-        // Define the div for the tooltip
-        var div = d3.select("body").append("div")	
-            .attr("class", "tooltip")				
-            .style("opacity", 0);
-
         // bind our data to rectangles
         g.selectAll('rect')
             .data(data)
